@@ -1,0 +1,236 @@
+/* ===============================
+   GLOBAL
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f2f2;
+  color: #111;
+  margin: 0;
+}
+
+/* ===============================
+   SECTION BASE
+================================ */
+.hero-section,
+.about-section,
+.education-section,
+.skills-section,
+.certificate-section,
+.experience-section,
+.project-section {
+  background: #ffffff;
+  margin: 40px;
+  padding: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.9s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   HERO
+================================ */
+.menu {
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.script {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-style: italic;
+}
+
+.name {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.nim {
+  margin-top: 30px;
+  border-top: 2px solid #000;
+  width: 200px;
+  padding-top: 8px;
+}
+
+/* ===============================
+   HERO IMAGE
+================================ */
+.hero-img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box img {
+  width: 320px;
+  height: 420px;
+  object-fit: contain;
+  background: #f5f5f5;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.8s ease;
+}
+
+.img-box img:hover {
+  transform: scale(1.05);
+}
+
+.accent {
+  position: absolute;
+  background: #f6b44d;
+  width: 100%;
+  height: 100%;
+  top: -15px;
+  right: -15px;
+  z-index: 1;
+}
+
+/* ===============================
+   TITLES
+================================ */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #f6b44d;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ===============================
+   ABOUT
+================================ */
+.about-img {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  background: #f5f5f5;
+  padding: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   EDUCATION
+================================ */
+.edu-item {
+  margin-bottom: 30px;
+}
+
+.edu-item h5 {
+  font-weight: 600;
+}
+
+/* ===============================
+   SKILLS
+================================ */
+.skill-box {
+  padding: 30px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.skill-box:hover {
+  background: #f6b44d;
+  color: #000;
+  transform: translateY(-6px);
+}
+
+/* ===============================
+   CERTIFICATE & EXPERIENCE
+================================ */
+.certificate-section ul,
+.experience-section ul {
+  padding-left: 20px;
+}
+
+.certificate-section li,
+.experience-section li {
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   PROJECT (NO CROP)
+================================ */
+.project-card {
+  padding: 20px;
+  transition: 0.5s ease;
+}
+
+.project-card.hovered {
+  transform: translateY(-12px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;          /* tinggi seragam */
+  object-fit: contain;   /* FOTO UTUH */
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   CONTACT
+================================ */
+.contact-section {
+  background: #000;
+  color: #fff;
+  padding: 80px;
+  margin: 40px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+  .hero-section,
+  .about-section,
+  .education-section,
+  .skills-section,
+  .certificate-section,
+  .experience-section,
+  .project-section {
+    padding: 50px 30px;
+    margin: 20px;
+  }
+
+  .img-box img {
+    width: 260px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .script {
+    font-size: 36px;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  .about-img {
+    height: 260px;
+  }
+}
